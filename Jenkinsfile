@@ -17,16 +17,17 @@ pipeline {
         }
         stage("OWASP Dependency Check") {
             steps {
-                dependencyCheck(
-                    additionalArguments: '--scan .',
-                    odcInstallation: 'Dependency-Check')
+                echo "Running npm audit..."
+                sh '''
+                    npm audit --json > npm-audit-report.json || true
+                '''
             }
     
         }
         stage('Publish Dependency Report') {
             steps {
-                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
-    }
-}
+                archiveArtifacts artifacts: 'npm-audit-report.json', fingerprint: true
+            }
+        }
     }
 }
