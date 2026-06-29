@@ -1,0 +1,22 @@
+{
+  "name": "devsecops-lab",
+  "version": "1.0.0",
+  "description": "Production-style DevSecOps learning website with secure defaults, tests, CI, and operations docs.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/server.test.js",
+    "security:headers": "node scripts/security-check.js",
+    "ci": "npm run test && npm run security:headers"
+  },
+  "keywords": [
+    "devsecops",
+    "secure-cicd",
+    "security-headers",
+    "learning-lab"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

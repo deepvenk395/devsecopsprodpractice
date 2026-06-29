@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A production-style DevSecOps learning website with secure delivery workflows.">
+    <title>DevSecOps Lab</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="DevSecOps Lab home">
+        <span class="brand-mark">D</span>
+        <span>DevSecOps Lab</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#pipeline">Pipeline</a>
+        <a href="#security">Security</a>
+        <a href="#operations">Ops</a>
+        <a href="#practice">Practice</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="overview" class="hero">
+        <img src="/assets/devsecops-command-center.png" alt="DevSecOps command center dashboard illustration">
+        <div class="hero-overlay">
+          <p class="eyebrow">Production-grade learning project</p>
+          <h1>Run a company-style DevSecOps website from laptop to pipeline.</h1>
+          <p class="hero-copy">Practice secure coding, CI checks, containerization, release gates, monitoring, incidents, and audit evidence in one maintainable app.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#practice">Start Practice</a>
+            <a class="button secondary" href="#pipeline">View Pipeline</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Delivery and security metrics">
+        <article>
+          <span class="metric-value">8</span>
+          <span class="metric-label">Security Gates</span>
+        </article>
+        <article>
+          <span class="metric-value">99.9%</span>
+          <span class="metric-label">Availability Target</span>
+        </article>
+        <article>
+          <span class="metric-value">24h</span>
+          <span class="metric-label">Critical SLA</span>
+        </article>
+        <article>
+          <span class="metric-value">0</span>
+          <span class="metric-label">Known Criticals</span>
+        </article>
+      </section>
+
+      <section id="pipeline" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Secure software delivery</p>
+          <h2>Pipeline You Can Maintain</h2>
+          <p>Each stage maps to work you will see in real teams: code review, dependency scanning, SAST, container checks, deployment approval, and operational monitoring.</p>
+        </div>
+        <div class="pipeline" data-pipeline></div>
+      </section>
+
+      <section id="security" class="section split">
+        <div class="section-heading">
+          <p class="eyebrow">Shift left and stay right</p>
+          <h2>Security Controls</h2>
+          <p>The app ships with secure headers, path traversal protection, a health endpoint, automated tests, and a CI workflow you can expand with real tools.</p>
+        </div>
+        <div class="control-grid" data-controls></div>
+      </section>
+
+      <section id="operations" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Operate like production</p>
+          <h2>Release and Incident Board</h2>
+          <p>Use this board to practice release evidence, ownership, severity, and response discipline before you face it on a company system.</p>
+        </div>
+        <div class="ops-grid">
+          <article class="panel">
+            <h3>Release Readiness</h3>
+            <ul class="checklist" data-readiness></ul>
+          </article>
+          <article class="panel">
+            <h3>Incident Simulation</h3>
+            <div class="incident-list" data-incidents></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="practice" class="section practice">
+        <div class="section-heading">
+          <p class="eyebrow">Your hands-on track</p>
+          <h2>30-Day DevSecOps Practice Plan</h2>
+          <p>Maintain this repo like a real service. Every task leaves evidence: tests, docs, CI output, pull-request notes, and fixes.</p>
+        </div>
+        <div class="practice-grid" data-practice></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>DevSecOps Lab</span>
+      <span>Secure by default. Meant to be changed, tested, and improved.</span>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
