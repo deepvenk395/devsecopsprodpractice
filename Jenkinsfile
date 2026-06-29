@@ -2,32 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('checkout') {
             steps {
-                echo 'Checking out source code...'
+                echo "Repository checked out successfully!"
+                sh 'pwd'
+                sh 'ls -la'
             }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building application...'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
